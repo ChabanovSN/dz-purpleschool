@@ -1,0 +1,1 @@
+docker run --name pg -d -v /home/doka/v2/data:/data/pg  -e POSTGRES_PASSWORD=password  postgres:latest 
