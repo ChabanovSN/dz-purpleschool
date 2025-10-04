@@ -1,0 +1,6 @@
+docker pull postgres
+docker run --name pg -d -v /home/vasa/data:/data/pg  -e POSTGRES_PASSWORD=password  postgres:latest
+docker rm -f pg
+ls /home/vasa/data
+mv /home/vasa/data/. /home/vasa/v2/data
+docker run --name pg -d -v /home/vasa/v2/data:/data/pg  -e POSTGRES_PASSWORD=password  postgres:latest 
